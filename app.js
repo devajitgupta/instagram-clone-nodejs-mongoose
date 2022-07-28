@@ -53,6 +53,16 @@ app.post("/", async (request, response) => {
     console.log(user)
   });
   
+  app.get("/", async (request, response) => {
+    const user = await User.find({});
+  
+    try {
+      response.send(user);
+    } catch (error) {
+      response.status(500).send(error);
+    }
+  });
+  
 
 /*
 app.route('/').post((req,res,next)=>{
