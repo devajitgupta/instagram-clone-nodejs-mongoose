@@ -40,7 +40,7 @@ app.get('/',(req,res)=>{
 
 // ...
 
-app.post("/", async (request, response) => {
+app.post("/user", async (request, response) => {
     const user = new User(request.body);
   
     try {
@@ -53,7 +53,7 @@ app.post("/", async (request, response) => {
     console.log(user)
   });
   
-  app.get("/", async (request, response) => {
+  app.get("/users", async (request, response) => {
     const user = await User.find({});
   
     try {
@@ -63,6 +63,7 @@ app.post("/", async (request, response) => {
     }
   });
   
+  module.exports = app;
 
 /*
 app.route('/').post((req,res,next)=>{
