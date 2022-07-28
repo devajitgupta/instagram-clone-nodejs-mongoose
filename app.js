@@ -53,6 +53,7 @@ app.post("/user", async (request, response) => {
     console.log(user)
   });
   
+/*
 app.route('/').post((req,res,next)=>{
     User.create(req.body,(error,data)=>{
         
@@ -65,6 +66,7 @@ app.route('/').post((req,res,next)=>{
     });
 
 });
+*/
 app.get('/images/apple-store-button.png', function (req, res) {
     res.sendFile(path.join(__dirname, './images/apple-store-button.png'))
 });
